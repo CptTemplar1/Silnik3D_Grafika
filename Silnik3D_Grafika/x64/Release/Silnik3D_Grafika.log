@@ -1,14 +1,7 @@
-﻿  Camera.cpp
-C:\Users\przem\OneDrive\Pulpit\Silnik3D_Grafika\Silnik3D_Grafika\Camera.h(2,10): fatal  error C1083: Nie można otworzyć pliku dołącz: '../glm/gtc/type_ptr.hpp': No such file or directory
-  Cube.cpp
-C:\Users\przem\OneDrive\Pulpit\Silnik3D_Grafika\Silnik3D_Grafika\GameObject.h(2,10): fatal  error C1083: Nie można otworzyć pliku dołącz: '../../glm/matrix.hpp': No such file or directory
-  Drawer.cpp
-C:\Users\przem\OneDrive\Pulpit\Silnik3D_Grafika\Silnik3D_Grafika\GameObject.h(2,10): fatal  error C1083: Nie można otworzyć pliku dołącz: '../../glm/matrix.hpp': No such file or directory
-  Engine.cpp
-C:\Users\przem\OneDrive\Pulpit\Silnik3D_Grafika\Silnik3D_Grafika\GameObject.h(2,10): fatal  error C1083: Nie można otworzyć pliku dołącz: '../../glm/matrix.hpp': No such file or directory
-  GameObject.cpp
-C:\Users\przem\OneDrive\Pulpit\Silnik3D_Grafika\Silnik3D_Grafika\GameObject.h(2,10): fatal  error C1083: Nie można otworzyć pliku dołącz: '../../glm/matrix.hpp': No such file or directory
-  Player.cpp
-C:\Users\przem\OneDrive\Pulpit\Silnik3D_Grafika\Silnik3D_Grafika\Player.h(2,10): fatal  error C1083: Nie można otworzyć pliku dołącz: '../Camera.h': No such file or directory
-  Silnik3D_Grafika.cpp
-C:\Users\przem\OneDrive\Pulpit\Silnik3D_Grafika\Silnik3D_Grafika\GameObject.h(2,10): fatal  error C1083: Nie można otworzyć pliku dołącz: '../../glm/matrix.hpp': No such file or directory
+﻿  Silnik3D_Grafika.cpp
+  Trwa generowanie kodu
+  3 of 4 functions (75.0%) were compiled, the rest were copied from previous compilation.
+    1 functions were new in current compilation
+    0 functions had inline decision re-evaluated but remain unchanged
+  Zakończono generowanie kodu
+  Silnik3D_Grafika.vcxproj -> D:\GitHub\Silnik3D_Grafika\x64\Release\Silnik3D_Grafika.exe

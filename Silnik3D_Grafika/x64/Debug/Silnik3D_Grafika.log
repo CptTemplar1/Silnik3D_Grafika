@@ -1,0 +1,2 @@
+﻿  Silnik3D_Grafika.cpp
+D:\GitHub\Silnik3D_Grafika\Silnik3D_Grafika\Silnik3D_Grafika.cpp(1,10): fatal  error C1083: Nie można otworzyć pliku dołącz: 'gl/glut.h': No such file or directory

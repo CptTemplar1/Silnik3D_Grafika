@@ -21,43 +21,5 @@
     <ClCompile Include="Silnik3D_Grafika.cpp">
       <Filter>Pliki źródłowe</Filter>
     </ClCompile>
-    <ClCompile Include="Engine.cpp">
-      <Filter>Pliki źródłowe</Filter>
-    </ClCompile>
-    <ClCompile Include="Camera.cpp">
-      <Filter>Pliki źródłowe\Objects</Filter>
-    </ClCompile>
-    <ClCompile Include="Player.cpp">
-      <Filter>Pliki źródłowe\Objects</Filter>
-    </ClCompile>
-    <ClCompile Include="GameObject.cpp">
-      <Filter>Pliki źródłowe\Objects</Filter>
-    </ClCompile>
-    <ClCompile Include="Cube.cpp">
-      <Filter>Pliki źródłowe\Objects</Filter>
-    </ClCompile>
-    <ClCompile Include="Drawer.cpp">
-      <Filter>Pliki źródłowe\Objects</Filter>
-    </ClCompile>
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="Engine.h">
-      <Filter>Pliki źródłowe</Filter>
-    </ClInclude>
-    <ClInclude Include="Camera.h">
-      <Filter>Pliki źródłowe\Objects</Filter>
-    </ClInclude>
-    <ClInclude Include="Player.h">
-      <Filter>Pliki źródłowe\Objects</Filter>
-    </ClInclude>
-    <ClInclude Include="GameObject.h">
-      <Filter>Pliki źródłowe\Objects</Filter>
-    </ClInclude>
-    <ClInclude Include="Cube.h">
-      <Filter>Pliki źródłowe\Objects</Filter>
-    </ClInclude>
-    <ClInclude Include="Drawer.h">
-      <Filter>Pliki źródłowe\Objects</Filter>
-    </ClInclude>
   </ItemGroup>
 </Project>
