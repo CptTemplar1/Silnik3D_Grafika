@@ -83,22 +83,18 @@ void Engine::Idle() {
 	}
 	last_time = now_time;
 	glutPostRedisplay();
-
-
 }
 
 void Engine::mouse(int x, int y)
 {
 	if (camera.getPerspective())
 	{
-
 		int x1 = glutGet(GLUT_WINDOW_X);
 		int y1 = glutGet(GLUT_WINDOW_Y);
 		Pos.x -= (x - w / 2) / 1.0f;
 		Pos.y -= (y - h / 2) / 1.0f;
 		SetCursorPos(w / 2 + x1, h / 2 + y1);
 		//camera.setPosition(Pos);
-
 		//camera.setOrientation(orien);
 	}
 	else
@@ -153,7 +149,6 @@ void Engine::OnSpecialKey(int key, int x, int y) {
 void Engine::OnTimer(int val) {
 	glutTimerFunc(1000 / FPS, OnTimer, 0);
 
-
 	//cube->translate({ 0.1f,0,0 });
 	//cube->scale({1.0001f,1,1});
 
@@ -166,7 +161,6 @@ void Engine::Draw()
 	camera.Matrix();
 	if (camera.getPerspective())
 	{
-
 		glm::mat4 view = camera.getView();
 		glm::mat4 ry = glm::rotate<float>(glm::degrees<float>(Pos.y / 36000), glm::vec3(1.0f, 0.0f, 0.0f));
 		glm::mat4 rx = glm::rotate<float>(glm::degrees<float>(Pos.x / 36000), glm::vec3(0.0f, -1.0f, 0.0f));
@@ -178,10 +172,6 @@ void Engine::Draw()
 		camera.setPosition({ 0,0,0 });
 		camera.setOrientation({ 0,0,1 });
 	}
-
-
-
-
 
 	//MatM = glm::rotate<float>(MatM, glm::radians(angle), glm::vec3(1, 0, 0));
 	//MatM = glm::rotate<float>(MatM, glm::radians(angle / 2), glm::vec3(0, 1, 0));
@@ -215,11 +205,6 @@ void Engine::Draw()
 	};
 
 	glm::vec3 c = { 1.0f,0.0f,1.0f };
-
-
-
-
-
 
 	switch (a)
 	{
