@@ -10,8 +10,8 @@
 
 int main(int argc, char* argv[]) {
 	glutInit(&argc, argv);
-	Engine* engine = new Engine(900, 900);
-	engine->setBackGroundColor({ 0, 0, 0, 1 });
+	Engine* engine = new Engine(1600, 900);
+	engine->setBackGroundColor({ 0, 0, 0, 0 });
 	//engine->toggleFullScreen;
 	engine->mainLoop();
 
