@@ -54,7 +54,6 @@ Cube::Cube(float x, float y, float z)
 		norms[i].z = py.x;
 		norms[i + 1].z = py.y;
 		norms[i + 2].z = py.z;
-		printf("%lf %lf %lf\n", points[i].x, points[i].y, points[i].z);
 	}
 	matrix = glm::mat4(1);
 
@@ -116,37 +115,9 @@ void Cube::scale(glm::vec3 p)
 void Cube::draw(glm::mat4 view)
 {
 	matrix = glm::mat4(1);
-	//r += 0.1;
-	//matrix = glm::rotate(glm::radians<float>(r), glm::vec3(1.0f, 0, 0));
-	//glutSolidCube(200);
-	matrix = glm::translate(matrix, glm::vec3(0, 0, 800));
+
+	matrix = glm::translate(matrix, glm::vec3(0, 0, -800));
 	glMatrixMode(GL_MODELVIEW);
 	glLoadMatrixf(glm::value_ptr(view * matrix));
 	Drawer::drawCube(points, norms, colors, index);
-
-	matrix = glm::translate(glm::vec3(0, 0, -800));
-	glMatrixMode(GL_MODELVIEW);
-	glLoadMatrixf(glm::value_ptr(view * matrix));
-	Drawer::drawCube(points, norms, { 1.0f,1.0f,0 }, index);
-
-	matrix = glm::translate(glm::vec3(0, -800, 0));
-	glMatrixMode(GL_MODELVIEW);
-	glLoadMatrixf(glm::value_ptr(view * matrix));
-	Drawer::drawCube(points, norms, { 0.0f,1.0f,1.0f }, index);
-
-	matrix = glm::translate(glm::vec3(0, 800, 0));
-	glMatrixMode(GL_MODELVIEW);
-	glLoadMatrixf(glm::value_ptr(view * matrix));
-	Drawer::drawCube(points, norms, { 1.0f,0.0f,1.0f }, index);
-
-	matrix = glm::translate(glm::vec3(-800, 0, 0));
-	glMatrixMode(GL_MODELVIEW);
-	glLoadMatrixf(glm::value_ptr(view * matrix));
-	Drawer::drawCube(points, norms, { 0.5f,0.0f,1.0f }, index);
-
-	matrix = glm::translate(glm::vec3(800, 0, 0));
-	glMatrixMode(GL_MODELVIEW);
-	glLoadMatrixf(glm::value_ptr(view * matrix));
-	Drawer::drawCube(points, norms, { 0,0.5f,1.0f }, index);
-
 }

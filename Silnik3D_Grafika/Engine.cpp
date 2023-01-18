@@ -7,12 +7,11 @@ int Engine::width = 900;
 int Engine::FPS = 60;
 glm::vec4 Engine::backgroundColor = { 0.0f,0.0f,0.0f,0.0f };
 int Engine::counter = 0;
-int Engine::quantity = 3;
 glm::vec3 Engine::pos = { 0 ,0, -100 };
 glm::vec3 Engine::degree = { 0 ,0, 0 };
 float Engine::lastX = 0;
 float Engine::lastY = 0;
-Cube* cube = new Cube(120.0f, 120.0f, 120.0f);
+Cube* cube = new Cube(220.0f, 220.0f, 220.0f);
 Camera Engine::camera(0, 0, glm::vec3(0.0f, 0.0f, 0.0f));
 
 /** \brief Konstruktor Engine
@@ -227,10 +226,6 @@ void Engine::OnKeyBoard(unsigned char key, int x, int y) {
 		counter--;
 	if (key == '2')
 		counter++;
-	if (key == '3')
-		quantity--;
-	if (key == '4')
-		quantity++;
 	if (key == 'w')
 		pos.z += 3;
 	if (key == 's')
@@ -331,10 +326,10 @@ void Engine::Draw()
 	switch (counter)
 	{
 	case 0:
-		Drawer::drawTriangles(tab, color, 6);
+		Drawer::drawPoints(tab, color, 10, 8);
 		break;
 	case 1:
-		Drawer::drawTriangles(tab, color1, 6);
+		Drawer::drawPoints(tab, color1, 25, 10);
 		break;
 	case 2:
 		Drawer::drawLines(tab, color, 10, 6);
@@ -343,22 +338,22 @@ void Engine::Draw()
 		Drawer::drawLines(tab, color1, 10, 6);
 		break;
 	case 4:
-		Drawer::drawTrianglesStrip(tab, color, quantity);
+		Drawer::drawTriangles(tab, color, 6);
 		break;
 	case 5:
-		Drawer::drawTrianglesStrip(tab, color1, quantity);
+		Drawer::drawTriangles(tab, color1, 6);
 		break;
 	case 6:
-		Drawer::drawTrianglesFan(tab, color, quantity);
+		Drawer::drawTrianglesStrip(tab, color, 6);
 		break;
 	case 7:
-		Drawer::drawTrianglesFan(tab, color1, quantity);
+		Drawer::drawTrianglesStrip(tab, color1, 8);
 		break;
 	case 8:
-		Drawer::drawPoints(tab, color, 10, 6);
+		Drawer::drawTrianglesFan(tab, color, 5);
 		break;
 	case 9:
-		Drawer::drawPoints(tab, color1, 10, 6);
+		Drawer::drawTrianglesFan(tab, color1, 8);
 		break;
 	case 10:
 		cube->draw(camera.getView());

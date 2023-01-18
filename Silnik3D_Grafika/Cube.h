@@ -13,7 +13,6 @@ class Cube
 	glm::vec3 norms[36];/**< Tablica wektorow norm szescianu */
 	glm::vec3 colors[8];/**< Tablica wektorow kolorow szescianu */
 	static int index[];/**< Statyczna tablica liczb calkowitych przechowujaca indexy */
-	float r = 0;/**< Zmienna zmiennoprzecinkowa przechowujaca rotacje szescianu */
 public:
 	Cube(float x, float y, float z);
 

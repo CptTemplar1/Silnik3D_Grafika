@@ -1,22 +1,7 @@
-﻿  Camera.cpp
-C:\Users\przem\OneDrive\Pulpit\Silnik3D_Grafika\Silnik3D_Grafika\Camera.cpp(21,38): warning C4244: "argument": konwersja z "int" do "T", możliwa utrata danych
-          with
-          [
-              T=float
-          ]
-C:\Users\przem\OneDrive\Pulpit\Silnik3D_Grafika\Silnik3D_Grafika\Camera.cpp(21,31): warning C4244: "argument": konwersja z "int" do "T", możliwa utrata danych
-          with
-          [
-              T=float
-          ]
-C:\Users\przem\OneDrive\Pulpit\Silnik3D_Grafika\Silnik3D_Grafika\Camera.cpp(60,17): warning C4244: "=": konwersja z "int" do "float", możliwa utrata danych
-C:\Users\przem\OneDrive\Pulpit\Silnik3D_Grafika\Silnik3D_Grafika\Camera.cpp(65,20): warning C4244: "=": konwersja z "int" do "float", możliwa utrata danych
-C:\Users\przem\OneDrive\Pulpit\Silnik3D_Grafika\Silnik3D_Grafika\Camera.cpp(70,19): warning C4244: "=": konwersja z "int" do "float", możliwa utrata danych
-  Engine.cpp
-  Silnik3D_Grafika.cpp
+﻿  Engine.cpp
   Trwa generowanie kodu
-  5 of 115 functions ( 4.3%) were compiled, the rest were copied from previous compilation.
+  3 of 108 functions ( 2.8%) were compiled, the rest were copied from previous compilation.
     0 functions were new in current compilation
-    0 functions had inline decision re-evaluated but remain unchanged
+    1 functions had inline decision re-evaluated but remain unchanged
   Zakończono generowanie kodu
   Silnik3D_Grafika.vcxproj -> C:\Users\przem\OneDrive\Pulpit\Silnik3D_Grafika\x64\Release\Silnik3D_Grafika.exe

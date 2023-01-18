@@ -18,7 +18,6 @@ class Engine
 	static int height;/**< Zmienna statyczna calkowita przechowujaca wysokosc ekranu */
 	static glm::vec4 backgroundColor;/**< Statyczny wektor przechowujacy kolor tla */
 	static int counter;/**< Zmienna statyczna calkowita przechowujaca liczbe iteracji */
-	static int quantity;/**< Zmienna statyczna calkowita przechowujaca ilosc figur */
 	static glm::vec3 pos;/**< Statyczny wektor przechowujacy pozycje */
 	static glm::vec3 degree;/**< Statyczny wektor przechowujacy kat widzenia */
 	static float lastX;/**< Zmienna statyczna zmiennoprzecinkowa przechowujaca ostatnia pozycje x */
