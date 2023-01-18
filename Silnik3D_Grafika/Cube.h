@@ -1,14 +1,19 @@
 #pragma once
 #include "Drawer.h"
 
+/** \brief Klasa Cube
+ *
+ * Klasa Cube jest klasa szescianu.
+ *
+ */
 class Cube
 {
-	glm::mat4 matrix;
-	glm::vec3 points[8];
-	glm::vec3 norms[36];
-	glm::vec3 colors[8];
-	static int index[];
-	float r = 0;
+	glm::mat4 matrix;/**< Matrix przechowujacy matrix szescianu */
+	glm::vec3 points[8];/**< Tablica wektorow punktow szescianu */
+	glm::vec3 norms[36];/**< Tablica wektorow norm szescianu */
+	glm::vec3 colors[8];/**< Tablica wektorow kolorow szescianu */
+	static int index[];/**< Statyczna tablica liczb calkowitych przechowujaca indexy */
+	float r = 0;/**< Zmienna zmiennoprzecinkowa przechowujaca rotacje szescianu */
 public:
 	Cube(float x, float y, float z);
 

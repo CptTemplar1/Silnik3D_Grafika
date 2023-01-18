@@ -5,6 +5,11 @@
 #include "../glm/matrix.hpp"
 #include "../glm/gtx/transform.hpp"
 #include "../glm/gtc/type_ptr.hpp"
+/** \brief Klasa Drawer
+ *
+ * Klasa Drawer jest klasa sluzaca do rysowania prymitywow.
+ *
+ */
 class Drawer
 {
 public:
@@ -20,8 +25,6 @@ public:
 	static void drawLinesLoop(glm::vec3 tab[], glm::vec3 color, int size, int n = 4);
 	static void drawPoints(glm::vec3 tab[], glm::vec3 color[], int size, int n);
 	static void drawPoints(glm::vec3 tab[], glm::vec3 color, int size, int n);
-	static void drawQuards(glm::vec3 tab[], glm::vec3 color[], int n);
-	static void drawQuards(glm::vec3 tab[], glm::vec3 color, int n);
 	static void drawCube(glm::vec3 tab[], glm::vec3 cubeNorm[], glm::vec3 color[], int index[]);
 	static void drawCube(glm::vec3 tab[], glm::vec3 cubeNorm[], glm::vec3 color, int index[]);
 	static void drawCubeLines(glm::vec3 tab[], glm::vec3 cubeNorm[], glm::vec3 color, int index[]);

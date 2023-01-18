@@ -15,6 +15,14 @@ float Engine::lastY = 0;
 Cube* cube = new Cube(120.0f, 120.0f, 120.0f);
 Camera Engine::camera(0, 0, glm::vec3(0.0f, 0.0f, 0.0f));
 
+/** \brief Konstruktor Engine
+ *
+ * Konstruktor laczacy metody z biblioteka freeglut.
+ *
+ * \param[in] w przekazuje szerokosc ekranu
+ * \param[in] h przekazuje wysokosc ekranu
+ *
+ */
 Engine::Engine(int w, int h)
 {
 	this->width = w;
@@ -43,28 +51,55 @@ Engine::Engine(int w, int h)
 	camera = Camera(w, h, glm::vec3(0.0f, 0.0f, 0.0f));
 }
 
+/** \brief Metoda setBackGroundColor
+ *
+ * Metoda ustawia przekazany kolor tla.
+ *
+ * \param[in] color przekazuje wektor z kolorami do ustwaienia
+ *
+ */
 void Engine::setBackGroundColor(glm::vec4 color)
 {
 	glClearColor(color.r, color.g, color.b, color.a);
 }
 
+/** \brief Metoda toggleFullScreen
+ *
+ * Metoda ustawia pelny ekran.
+ *
+ */
 void Engine::toggleFullScreen() 
 {
 	glutFullScreenToggle();
 }
 
+/** \brief Metoda swapToPerspectiv
+ *
+ * Metoda sluzaca do zmiany widzenia na perspektywiczne.
+ *
+ */
 void Engine::swapToPerspectiv()
 {
 	if (!camera.getPerspective())
 		camera.changePerspective();
 }
 
+/** \brief Metoda swapToOrtogonal
+ *
+ * Metoda sluzaca do zmiany widzenia na ortogonalne.
+ *
+ */
 void Engine::swapToOrtogonal()
 {
 	if (camera.getPerspective())
 		camera.changePerspective();
 }
 
+/** \brief Metoda swapPrespectiveMode
+ *
+ * Metoda sluzaca do zmiany widzenia na perspektywiczne lub ortogonalne.
+ *
+ */
 void Engine::swapPrespectiveMode()
 {
 	if (camera.getPerspective())
@@ -73,7 +108,11 @@ void Engine::swapPrespectiveMode()
 		swapToPerspectiv();
 }
 
-
+/** \brief Metoda Idle
+ *
+ * Metoda wywolywana w tle.
+ *
+ */
 void Engine::Idle() 
 {
 
@@ -88,16 +127,34 @@ void Engine::Idle()
 	glutPostRedisplay();
 }
 
+/** \brief Metoda OnClose
+ *
+ * Metoda wywolywana przy zamknieciu.
+ *
+ */
 void Engine::OnClose() 
 {
 
 }
 
+/** \brief Metoda update
+ *
+ * Metoda aktualizujaca.
+ *
+ */
 void Engine::update() 
 {
 
 }
 
+/** \brief Metoda mouse
+ *
+ * Metoda w zaleznosci od perspektywy zarzadza myszka.
+ *
+ * \param[in] x przekazuje wspolrzedna myszki
+ * \param[in] y przekazuje wspolrzedna myszki
+ *
+ */
 void Engine::mouse(int x, int y)
 {
 	if (camera.getPerspective())
@@ -115,6 +172,14 @@ void Engine::mouse(int x, int y)
 	}
 }
 
+/** \brief Metoda resize
+ *
+ * Metoda zmienia wielkosc okna.
+ *
+ * \param[in] w przekazuje szerokosc okna
+ * \param[in] h przekazuje wysokosc okna
+ *
+ */
 void Engine::resize(int w, int h) 
 {
 	Engine::width = w;
@@ -124,17 +189,38 @@ void Engine::resize(int w, int h)
 	glViewport(0, 0, w, h);
 }
 
+/** \brief Metoda setFPS
+ *
+ * Metoda ustawia liczbe fps'ow.
+ *
+ * \param[in] FPS przekazuje liczbe fps'ow
+ *
+ */
 void Engine::setFPS(int FPS) 
 {
 	Engine::FPS = FPS;
 	glutTimerFunc(1000 / FPS, OnTimer, 0);
 }
 
+/** \brief Metoda mainLoop
+ *
+ * Metoda sluzaca do odpalania glownej petli.
+ *
+ */
 void Engine::mainLoop()
 {
 	glutMainLoop();
 }
 
+/** \brief Metoda OnKeyBoard
+ *
+ * Metoda w zaleznosci od wcisnietego przycisku zwieksza iteracje lub liczbe wyswietlanych figur.
+ *
+ * \param[in] key przekazuje przycisk
+ * \param[in] x przekazuje wspolrzedna x
+ * \param[in] y przekazuje wspolrzedna y
+ *
+ */
 void Engine::OnKeyBoard(unsigned char key, int x, int y) {
 
 	if (key == '1')
@@ -161,6 +247,15 @@ void Engine::OnKeyBoard(unsigned char key, int x, int y) {
 	camera.Inputs(key);
 }
 
+/** \brief Metoda OnSpecialKey
+ *
+ * Metoda w zaleznosci od wcisnietego specjalnego przycisku zmienia perspektywe.
+ *
+ * \param[in] key przekazuje przycisk
+ * \param[in] x przekazuje wspolrzedna x
+ * \param[in] y przekazuje wspolrzedna y
+ *
+ */
 void Engine::OnSpecialKey(int key, int x, int y) {
 	if (key == GLUT_KEY_F1)
 		toggleFullScreen();
@@ -168,6 +263,13 @@ void Engine::OnSpecialKey(int key, int x, int y) {
 		swapPrespectiveMode();
 }
 
+/** \brief Metoda OnTimer
+ *
+ * Metoda sluzaca do szybkosci wyswietlania obrazu.
+ *
+ * \param[in] val przekazuje wartosci
+ *
+ */
 void Engine::OnTimer(int val) {
 	glutTimerFunc(1000 / FPS, OnTimer, 0);
 
@@ -176,6 +278,11 @@ void Engine::OnTimer(int val) {
 	glutPostRedisplay();
 }
 
+/** \brief Metoda Draw
+ *
+ * Metoda sluzaca rysujaca podane obiekty.
+ *
+ */
 void Engine::Draw()
 {
 	camera.Matrix();
@@ -254,20 +361,19 @@ void Engine::Draw()
 		Drawer::drawPoints(tab, color1, 10, 6);
 		break;
 	case 10:
-		Drawer::drawQuards(tab, color, quantity);
-		break;
-	case 11:
-		Drawer::drawQuards(tab, color1, quantity);
-		break;
-	case 12:
 		cube->draw(camera.getView());
 		break;
 	default:
-		Drawer::drawTriangles(tab, color, 6);
+		cube->draw(camera.getView());
 		break;
 	};
 }
 
+/** \brief Metoda draw
+ *
+ * Metoda rysujaca przekazywana do freeglut.
+ *
+ */
 void Engine::draw(void) {
 	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 	Draw();

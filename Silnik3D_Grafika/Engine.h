@@ -6,17 +6,24 @@
 #include "../glm/gtx/transform.hpp"
 #include "Camera.h"
 
+/** \brief Klasa Engine
+ *
+ * Klasa Engine jest to glowna klasa silnika.
+ *
+ */
 class Engine
 {
-	static int FPS;
-	static int width, height;
-	static glm::vec4 backgroundColor;
-	static int counter;
-	static int quantity;
-	static glm::vec3 pos;
-	static glm::vec3 degree;
-	static float lastX, lastY;
-	static Camera camera;
+	static int FPS;/**< Zmienna statyczna calkowita przechowujaca liczbe fps'ow */
+	static int width;/**< Zmienna statyczna calkowita przechowujaca szerokosc ekranu */
+	static int height;/**< Zmienna statyczna calkowita przechowujaca wysokosc ekranu */
+	static glm::vec4 backgroundColor;/**< Statyczny wektor przechowujacy kolor tla */
+	static int counter;/**< Zmienna statyczna calkowita przechowujaca liczbe iteracji */
+	static int quantity;/**< Zmienna statyczna calkowita przechowujaca ilosc figur */
+	static glm::vec3 pos;/**< Statyczny wektor przechowujacy pozycje */
+	static glm::vec3 degree;/**< Statyczny wektor przechowujacy kat widzenia */
+	static float lastX;/**< Zmienna statyczna zmiennoprzecinkowa przechowujaca ostatnia pozycje x */
+	static float lastY;/**< Zmienna statyczna zmiennoprzecinkowa przechowujaca ostatnia pozycje x */
+	static Camera camera;/**< Statyczny obiekt kamery */
 public:
 	Engine(int width, int height);
 
