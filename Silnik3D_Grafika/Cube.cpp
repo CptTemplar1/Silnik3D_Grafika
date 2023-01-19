@@ -116,7 +116,10 @@ void Cube::draw(glm::mat4 view)
 {
 	matrix = glm::mat4(1);
 
-	matrix = glm::translate(matrix, glm::vec3(0, 0, -800));
+	r += 0.1;
+ 	matrix = glm::rotate(glm::radians<float>(r), glm::vec3(1.0f, 0, 0));
+	//matrix = glm::scale(glm::vec3(0.5f, 1.0f, 1.0f));
+	//matrix = glm::translate(matrix, glm::vec3(0, 0, -800));
 	glMatrixMode(GL_MODELVIEW);
 	glLoadMatrixf(glm::value_ptr(view * matrix));
 	Drawer::drawCube(points, norms, colors, index);

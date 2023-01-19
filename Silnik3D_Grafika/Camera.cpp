@@ -17,7 +17,7 @@ Camera::Camera(int width, int height, glm::vec3 position)
 
 /** \brief Metoda Matrix
  *
- * Metoda ustawia matrix'a.
+ * Metoda ustawia projekcje.
  *
  */
 void Camera::Matrix()
