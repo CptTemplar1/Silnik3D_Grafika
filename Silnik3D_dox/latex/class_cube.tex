@@ -1,0 +1,213 @@
+\hypertarget{class_cube}{}\doxysection{Cube Class Reference}
+\label{class_cube}\index{Cube@{Cube}}
+
+
+Klasa \mbox{\hyperlink{class_cube}{Cube}}.  
+
+
+
+
+{\ttfamily \#include $<$Cube.\+h$>$}
+
+Inheritance diagram for Cube\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_cube}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_cube_aa282c5aa1314d9467ec6c14b2dbcddfd}{Cube}} (float x, float y, float z)
+\begin{DoxyCompactList}\small\item\em Konstruktor \mbox{\hyperlink{class_cube}{Cube}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_cube_ad7aa27de87e56dd616c82fbc73edbaa5}{translate}} (glm\+::vec3 p)
+\begin{DoxyCompactList}\small\item\em Metoda transalte. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_cube_a3ba4c0c6f5116b38509b940eacdc9c26}{rotate}} (float degree, glm\+::vec3 p)
+\begin{DoxyCompactList}\small\item\em Metoda rotate. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_cube_aa3d4d5efc28317408da2ba53b1924a3e}{scale}} (glm\+::vec3 p)
+\begin{DoxyCompactList}\small\item\em Metoda scale. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_cube_a25b2258b528b1df8e15d894fb73e16c0}{draw}} (glm\+::mat4 view)
+\begin{DoxyCompactList}\small\item\em Metoda draw. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+glm\+::mat4 \mbox{\hyperlink{class_cube_aa4ca5d1e1633550f30cd5c2e3dd0afc2}{matrix}}
+\item 
+glm\+::vec3 \mbox{\hyperlink{class_cube_a824a7ab6c63d12653753098522cb40ea}{points}} \mbox{[}8\mbox{]}
+\item 
+glm\+::vec3 \mbox{\hyperlink{class_cube_abc8b9e644724d2e17f45ac8910d00f71}{norms}} \mbox{[}36\mbox{]}
+\item 
+glm\+::vec3 \mbox{\hyperlink{class_cube_a8b5181e02b688447f1ee3b0540b4c762}{colors}} \mbox{[}8\mbox{]}
+\item 
+float \mbox{\hyperlink{class_cube_a8a4af26ee6d9ead878aea2b34d92eb2e}{r}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static int \mbox{\hyperlink{class_cube_ab9dd392e068b183e678b836c8cde055e}{index}} \mbox{[}$\,$\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Klasa \mbox{\hyperlink{class_cube}{Cube}}. 
+
+Klasa \mbox{\hyperlink{class_cube}{Cube}} jest klasa szescianu. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_cube_aa282c5aa1314d9467ec6c14b2dbcddfd}\label{class_cube_aa282c5aa1314d9467ec6c14b2dbcddfd}} 
+\index{Cube@{Cube}!Cube@{Cube}}
+\index{Cube@{Cube}!Cube@{Cube}}
+\doxysubsubsection{\texorpdfstring{Cube()}{Cube()}}
+{\footnotesize\ttfamily Cube\+::\+Cube (\begin{DoxyParamCaption}\item[{float}]{x,  }\item[{float}]{y,  }\item[{float}]{z }\end{DoxyParamCaption})}
+
+
+
+Konstruktor \mbox{\hyperlink{class_cube}{Cube}}. 
+
+Konstruktor przyisuje przekazane parametry do tablic.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em x} & przekazuje wspolrzedna x \\
+\hline
+\mbox{\texttt{ in}}  & {\em y} & przekazuje wspolrzedna y \\
+\hline
+\mbox{\texttt{ in}}  & {\em z} & przekazuje wspolrzedna z \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_cube_a25b2258b528b1df8e15d894fb73e16c0}\label{class_cube_a25b2258b528b1df8e15d894fb73e16c0}} 
+\index{Cube@{Cube}!draw@{draw}}
+\index{draw@{draw}!Cube@{Cube}}
+\doxysubsubsection{\texorpdfstring{draw()}{draw()}}
+{\footnotesize\ttfamily void Cube\+::draw (\begin{DoxyParamCaption}\item[{glm\+::mat4}]{view }\end{DoxyParamCaption})}
+
+
+
+Metoda draw. 
+
+Metoda sluzaca do rysowania.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em view} & przekazuje widok kamery \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_cube_a3ba4c0c6f5116b38509b940eacdc9c26}\label{class_cube_a3ba4c0c6f5116b38509b940eacdc9c26}} 
+\index{Cube@{Cube}!rotate@{rotate}}
+\index{rotate@{rotate}!Cube@{Cube}}
+\doxysubsubsection{\texorpdfstring{rotate()}{rotate()}}
+{\footnotesize\ttfamily void Cube\+::rotate (\begin{DoxyParamCaption}\item[{float}]{degree,  }\item[{glm\+::vec3}]{p }\end{DoxyParamCaption})}
+
+
+
+Metoda rotate. 
+
+Metoda rotuje szescian.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em degree} & przekazuje kat \\
+\hline
+\mbox{\texttt{ in}}  & {\em p} & przekazuje wketor wspolrzednych \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_cube_aa3d4d5efc28317408da2ba53b1924a3e}\label{class_cube_aa3d4d5efc28317408da2ba53b1924a3e}} 
+\index{Cube@{Cube}!scale@{scale}}
+\index{scale@{scale}!Cube@{Cube}}
+\doxysubsubsection{\texorpdfstring{scale()}{scale()}}
+{\footnotesize\ttfamily void Cube\+::scale (\begin{DoxyParamCaption}\item[{glm\+::vec3}]{p }\end{DoxyParamCaption})}
+
+
+
+Metoda scale. 
+
+Metoda skaluje szescian.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em p} & przekazuje wketor wspolrzednych \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_cube_ad7aa27de87e56dd616c82fbc73edbaa5}\label{class_cube_ad7aa27de87e56dd616c82fbc73edbaa5}} 
+\index{Cube@{Cube}!translate@{translate}}
+\index{translate@{translate}!Cube@{Cube}}
+\doxysubsubsection{\texorpdfstring{translate()}{translate()}}
+{\footnotesize\ttfamily void Cube\+::translate (\begin{DoxyParamCaption}\item[{glm\+::vec3}]{p }\end{DoxyParamCaption})}
+
+
+
+Metoda transalte. 
+
+Metoda translokuje szescian.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em p} & przekazuje wketor wspolrzednych \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_cube_a8b5181e02b688447f1ee3b0540b4c762}\label{class_cube_a8b5181e02b688447f1ee3b0540b4c762}} 
+\index{Cube@{Cube}!colors@{colors}}
+\index{colors@{colors}!Cube@{Cube}}
+\doxysubsubsection{\texorpdfstring{colors}{colors}}
+{\footnotesize\ttfamily glm\+::vec3 Cube\+::colors\mbox{[}8\mbox{]}\hspace{0.3cm}{\ttfamily [private]}}
+
+Tablica wektorow kolorow szescianu \mbox{\Hypertarget{class_cube_ab9dd392e068b183e678b836c8cde055e}\label{class_cube_ab9dd392e068b183e678b836c8cde055e}} 
+\index{Cube@{Cube}!index@{index}}
+\index{index@{index}!Cube@{Cube}}
+\doxysubsubsection{\texorpdfstring{index}{index}}
+{\footnotesize\ttfamily int Cube\+::index\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= \{}
+\DoxyCodeLine{    0,1,2, }
+\DoxyCodeLine{    1,2,3,}
+\DoxyCodeLine{    4,5,6, }
+\DoxyCodeLine{    5,6,7,}
+\DoxyCodeLine{    0,1,4, }
+\DoxyCodeLine{    1,4,5,}
+\DoxyCodeLine{    0,2,4, }
+\DoxyCodeLine{    2,4,6,}
+\DoxyCodeLine{    2,3,6, }
+\DoxyCodeLine{    3,6,7,}
+\DoxyCodeLine{    1,3,5, }
+\DoxyCodeLine{    3,5,7}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+Statyczna tablica liczb calkowitych przechowujaca indexy \mbox{\Hypertarget{class_cube_aa4ca5d1e1633550f30cd5c2e3dd0afc2}\label{class_cube_aa4ca5d1e1633550f30cd5c2e3dd0afc2}} 
+\index{Cube@{Cube}!matrix@{matrix}}
+\index{matrix@{matrix}!Cube@{Cube}}
+\doxysubsubsection{\texorpdfstring{matrix}{matrix}}
+{\footnotesize\ttfamily glm\+::mat4 Cube\+::matrix\hspace{0.3cm}{\ttfamily [private]}}
+
+Matrix przechowujacy matrix szescianu \mbox{\Hypertarget{class_cube_abc8b9e644724d2e17f45ac8910d00f71}\label{class_cube_abc8b9e644724d2e17f45ac8910d00f71}} 
+\index{Cube@{Cube}!norms@{norms}}
+\index{norms@{norms}!Cube@{Cube}}
+\doxysubsubsection{\texorpdfstring{norms}{norms}}
+{\footnotesize\ttfamily glm\+::vec3 Cube\+::norms\mbox{[}36\mbox{]}\hspace{0.3cm}{\ttfamily [private]}}
+
+Tablica wektorow norm szescianu \mbox{\Hypertarget{class_cube_a824a7ab6c63d12653753098522cb40ea}\label{class_cube_a824a7ab6c63d12653753098522cb40ea}} 
+\index{Cube@{Cube}!points@{points}}
+\index{points@{points}!Cube@{Cube}}
+\doxysubsubsection{\texorpdfstring{points}{points}}
+{\footnotesize\ttfamily glm\+::vec3 Cube\+::points\mbox{[}8\mbox{]}\hspace{0.3cm}{\ttfamily [private]}}
+
+Tablica wektorow punktow szescianu \mbox{\Hypertarget{class_cube_a8a4af26ee6d9ead878aea2b34d92eb2e}\label{class_cube_a8a4af26ee6d9ead878aea2b34d92eb2e}} 
+\index{Cube@{Cube}!r@{r}}
+\index{r@{r}!Cube@{Cube}}
+\doxysubsubsection{\texorpdfstring{r}{r}}
+{\footnotesize\ttfamily float Cube\+::r\hspace{0.3cm}{\ttfamily [private]}}
+
+Zmienna zmiennoprzecnikowa uzywana w rotacji 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+Git\+Hub/\+Silnik3\+D\+\_\+\+Grafika/\+Silnik3\+D\+\_\+\+Grafika/Cube.\+h\item 
+D\+:/\+Git\+Hub/\+Silnik3\+D\+\_\+\+Grafika/\+Silnik3\+D\+\_\+\+Grafika/Cube.\+cpp\end{DoxyCompactItemize}

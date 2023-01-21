@@ -15,6 +15,15 @@ int Cube::index[] = {
 	3,5,7
 };
 
+/** \brief Konstruktor Cube
+ *
+ * Konstruktor przyisuje przekazane parametry do tablic.
+ *
+ * \param[in] x przekazuje wspolrzedna x
+ * \param[in] y przekazuje wspolrzedna y
+ * \param[in] z przekazuje wspolrzedna z
+ *
+ */
 Cube::Cube(float x, float y, float z)
 {
 	x = x / 2;
@@ -45,12 +54,18 @@ Cube::Cube(float x, float y, float z)
 		norms[i].z = py.x;
 		norms[i + 1].z = py.y;
 		norms[i + 2].z = py.z;
-		printf("%lf %lf %lf\n", points[i].x, points[i].y, points[i].z);
 	}
 	matrix = glm::mat4(1);
 
 }
 
+/** \brief Metoda transalte
+ *
+ * Metoda translokuje szescian.
+ *
+ * \param[in] p przekazuje wketor wspolrzednych
+ *
+ */
 void Cube::translate(glm::vec3 p)
 {
 	glm::mat4 m
@@ -61,6 +76,15 @@ void Cube::translate(glm::vec3 p)
 			0,0,0,1 };
 	matrix *= m;
 }
+
+/** \brief Metoda rotate
+ *
+ * Metoda rotuje szescian.
+ *
+ * \param[in] degree przekazuje kat
+ * \param[in] p przekazuje wketor wspolrzednych
+ *
+ */
 void Cube::rotate(float degree, glm::vec3 p)
 {
 	glm::mat4 m = glm::rotate<float>(glm::radians(degree), p);
@@ -68,8 +92,35 @@ void Cube::rotate(float degree, glm::vec3 p)
 
 }
 
+/** \brief Metoda scale
+ *
+ * Metoda skaluje szescian.
+ *
+ * \param[in] p przekazuje wketor wspolrzednych
+ *
+ */
 void Cube::scale(glm::vec3 p)
 {
 	glm::mat4 m = glm::scale<float>(p);
 	matrix *= m;
+}
+
+/** \brief Metoda draw
+ *
+ * Metoda sluzaca do rysowania.
+ *
+ * \param[in] view przekazuje widok kamery
+ *
+ */
+void Cube::draw(glm::mat4 view)
+{
+	matrix = glm::mat4(1);
+
+	r += 0.1;
+ 	matrix = glm::rotate(glm::radians<float>(r), glm::vec3(1.0f, 0, 0));
+	//matrix = glm::scale(glm::vec3(0.5f, 1.0f, 1.0f));
+	//matrix = glm::translate(matrix, glm::vec3(0, 0, -800));
+	glMatrixMode(GL_MODELVIEW);
+	glLoadMatrixf(glm::value_ptr(view * matrix));
+	Drawer::drawCube(points, norms, colors, index);
 }

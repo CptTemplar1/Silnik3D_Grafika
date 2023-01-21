@@ -1,6 +1,15 @@
 #include "Drawer.h"
 
 
+/** \brief Metoda drawTriangles
+ *
+ * Metoda sluzy do rysowania trojkatow, dzieki freeglut.
+ *
+ * \param[in] tab przekazuje tablice wektorow wspolrzednych
+ * \param[in] color przekazuje tablice wektorow kolorow
+ * \param[in] n przekazuje liczbe calkowita ilosci figur
+ *
+ */
 void Drawer::drawTriangles(glm::vec3 tab[], glm::vec3 color[], int n)
 {
 
@@ -15,6 +24,15 @@ void Drawer::drawTriangles(glm::vec3 tab[], glm::vec3 color[], int n)
 	glDisableClientState(GL_COLOR_ARRAY);
 }
 
+/** \brief Metoda drawTriangles
+ *
+ * Metoda sluzy do rysowania trojkatow.
+ *
+ * \param[in] tab przekazuje tablice wektorow wspolrzednych
+ * \param[in] color przekazuje wektor kolorow
+ * \param[in] n przekazuje liczbe calkowita ilosci figur
+ *
+ */
 void Drawer::drawTriangles(glm::vec3 tab[], glm::vec3 color, int n)
 {
 
@@ -25,6 +43,15 @@ void Drawer::drawTriangles(glm::vec3 tab[], glm::vec3 color, int n)
 	delete color2;
 }
 
+/** \brief Metoda drawTrianglesStrip
+ *
+ * Metoda sluzy do rysowania trojkatow, prostopadlych do bokow innych trojkatow, dzieki freeglut.
+ *
+ * \param[in] tab przekazuje tablice wektorow wspolrzednych
+ * \param[in] color przekazuje tablice wektorow kolorow
+ * \param[in] n przekazuje liczbe calkowita ilosci figur
+ *
+ */
 void Drawer::drawTrianglesStrip(glm::vec3 tab[], glm::vec3 color[], int n)
 {
 
@@ -39,6 +66,15 @@ void Drawer::drawTrianglesStrip(glm::vec3 tab[], glm::vec3 color[], int n)
 	glDisableClientState(GL_COLOR_ARRAY);
 }
 
+/** \brief Metoda drawTrianglesStrip
+ *
+ * Metoda sluzy do rysowania trojkatow, prostopadlych do bokow innych trojkatow.
+ *
+ * \param[in] tab przekazuje tablice wektorow wspolrzednych
+ * \param[in] color przekazuje wektor kolorow
+ * \param[in] n przekazuje liczbe calkowita ilosci figur
+ *
+ */
 void Drawer::drawTrianglesStrip(glm::vec3 tab[], glm::vec3 color, int n)
 {
 
@@ -49,6 +85,15 @@ void Drawer::drawTrianglesStrip(glm::vec3 tab[], glm::vec3 color, int n)
 	delete color2;
 }
 
+/** \brief Metoda drawTrianglesFan
+ *
+ * Metoda sluzy do rysowania trojkatow, przy bokach poprzednich trojkatow, dzieki freeglut.
+ *
+ * \param[in] tab przekazuje tablice wektorow wspolrzednych
+ * \param[in] color przekazuje tablice wektorow kolorow
+ * \param[in] n przekazuje liczbe calkowita ilosci figur
+ *
+ */
 void Drawer::drawTrianglesFan(glm::vec3 tab[], glm::vec3 color[], int n)
 {
 
@@ -63,6 +108,15 @@ void Drawer::drawTrianglesFan(glm::vec3 tab[], glm::vec3 color[], int n)
 	glDisableClientState(GL_COLOR_ARRAY);
 }
 
+/** \brief Metoda drawTrianglesFan
+ *
+ * Metoda sluzy do rysowania trojkatow, przy bokach poprzednich trojkatow.
+ *
+ * \param[in] tab przekazuje tablice wektorow wspolrzednych
+ * \param[in] color przekazuje wektor kolorow
+ * \param[in] n przekazuje liczbe calkowita ilosci figur
+ *
+ */
 void Drawer::drawTrianglesFan(glm::vec3 tab[], glm::vec3 color, int n)
 {
 
@@ -73,7 +127,16 @@ void Drawer::drawTrianglesFan(glm::vec3 tab[], glm::vec3 color, int n)
 	delete color2;
 }
 
-
+/** \brief Metoda drawLines
+ *
+ * Metoda sluzy do rysowania linii, dzieki freeglut.
+ *
+ * \param[in] tab przekazuje tablice wektorow wspolrzednych
+ * \param[in] color przekazuje tablice wektorow kolorow
+ * \param[in] size przekazuje liczbe calkowita rozmiaru figury
+ * \param[in] n przekazuje liczbe calkowita ilosci figur
+ *
+ */
 void Drawer::drawLines(glm::vec3 tab[], glm::vec3 color[], int size, int n)
 {
 	glLineWidth(size);
@@ -89,6 +152,16 @@ void Drawer::drawLines(glm::vec3 tab[], glm::vec3 color[], int size, int n)
 	glDisableClientState(GL_COLOR_ARRAY);
 }
 
+/** \brief Metoda drawLines
+ *
+ * Metoda sluzy do rysowania linii.
+ *
+ * \param[in] tab przekazuje tablice wektorow wspolrzednych
+ * \param[in] color przekazuje tablice wektorow kolorow
+ * \param[in] size przekazuje liczbe calkowita rozmiaru figury
+ * \param[in] n przekazuje liczbe calkowita ilosci figur
+ *
+ */
 void Drawer::drawLines(glm::vec3 tab[], glm::vec3 color, int size, int n)
 {
 	glm::vec3* color2 = new glm::vec3[n];
@@ -98,6 +171,16 @@ void Drawer::drawLines(glm::vec3 tab[], glm::vec3 color, int size, int n)
 	delete color2;
 }
 
+/** \brief Metoda drawLinesLoop
+ *
+ * Metoda sluzy do rysowania linii z uzyciem petli, dzieki freeglut.
+ *
+ * \param[in] tab przekazuje tablice wektorow wspolrzednych
+ * \param[in] color przekazuje tablice wektorow kolorow
+ * \param[in] size przekazuje liczbe calkowita rozmiaru figury
+ * \param[in] n przekazuje liczbe calkowita ilosci figur
+ *
+ */
 void Drawer::drawLinesLoop(glm::vec3 tab[], glm::vec3 color[], int size, int n)
 {
 	glLineWidth(size);
@@ -113,6 +196,16 @@ void Drawer::drawLinesLoop(glm::vec3 tab[], glm::vec3 color[], int size, int n)
 	glDisableClientState(GL_COLOR_ARRAY);
 }
 
+/** \brief Metoda drawLinesLoop
+ *
+ * Metoda sluzy do rysowania linii z uzyciem petli.
+ *
+ * \param[in] tab przekazuje tablice wektorow wspolrzednych
+ * \param[in] color przekazuje wektor kolorow
+ * \param[in] size przekazuje liczbe calkowita rozmiaru figury
+ * \param[in] n przekazuje liczbe calkowita ilosci figur
+ *
+ */
 void Drawer::drawLinesLoop(glm::vec3 tab[], glm::vec3 color, int size, int n)
 {
 	glm::vec3* color2 = new glm::vec3[n];
@@ -122,6 +215,16 @@ void Drawer::drawLinesLoop(glm::vec3 tab[], glm::vec3 color, int size, int n)
 	delete color2;
 }
 
+/** \brief Metoda drawPoints
+ *
+ * Metoda sluzy do rysowania punktow, dzieki freeglut.
+ *
+ * \param[in] tab przekazuje tablice wektorow wspolrzednych
+ * \param[in] color przekazuje tablice wektorow kolorow
+ * \param[in] size przekazuje liczbe calkowita rozmiaru figury
+ * \param[in] n przekazuje liczbe calkowita ilosci figur
+ *
+ */
 void Drawer::drawPoints(glm::vec3 tab[], glm::vec3 color[], int size, int n)
 {
 	glPointSize(size);
@@ -137,6 +240,16 @@ void Drawer::drawPoints(glm::vec3 tab[], glm::vec3 color[], int size, int n)
 	glDisableClientState(GL_COLOR_ARRAY);
 }
 
+/** \brief Metoda drawPoints
+ *
+ * Metoda sluzy do rysowania punktow.
+ *
+ * \param[in] tab przekazuje tablice wektorow wspolrzednych
+ * \param[in] color przekazuje tablice wektorow kolorow
+ * \param[in] size przekazuje liczbe calkowita rozmiaru figury
+ * \param[in] n przekazuje liczbe calkowita ilosci figur
+ *
+ */
 void Drawer::drawPoints(glm::vec3 tab[], glm::vec3 color, int size, int n)
 {
 	glm::vec3* color2 = new glm::vec3[n];
@@ -146,31 +259,16 @@ void Drawer::drawPoints(glm::vec3 tab[], glm::vec3 color, int size, int n)
 	delete color2;
 }
 
-
-
-void Drawer::drawQuards(glm::vec3 tab[], glm::vec3 color[], int n)
-{
-	glEnableClientState(GL_VERTEX_ARRAY);
-	glEnableClientState(GL_COLOR_ARRAY);
-
-	glVertexPointer(3, GL_FLOAT, 0, tab);
-	glColorPointer(3, GL_FLOAT, 0, color);
-
-	glDrawArrays(GL_QUADS, 0, n);
-	glDisableClientState(GL_VERTEX_ARRAY);
-	glDisableClientState(GL_COLOR_ARRAY);
-}
-
-void Drawer::drawQuards(glm::vec3 tab[], glm::vec3 color, int n)
-{
-
-	glm::vec3* color2 = new glm::vec3[n];
-	for (int i = 0; i < n; i++)
-		color2[i] = color;
-	drawQuards(tab, color2, n);
-	delete color2;
-}
-
+/** \brief Metoda drawCube
+ *
+ * Metoda sluzy do rysowania kostki (szescianu).
+ *
+ * \param[in] tab przekazuje tablice wektorow wspolrzednych
+ * \param[in] cubeNorm przekazuje tablice norm do szescianu
+ * \param[in] color przekazuje tablice wektorow kolorow
+ * \param[in] index przekazuje tablice indeksow 
+ *
+ */
 void Drawer::drawCube(glm::vec3 tab[], glm::vec3 cubeNorm[], glm::vec3 color[], int index[])
 {
 	glm::vec3 points[3];
@@ -188,6 +286,17 @@ void Drawer::drawCube(glm::vec3 tab[], glm::vec3 cubeNorm[], glm::vec3 color[], 
 
 	}
 }
+
+/** \brief Metoda drawCube
+ *
+ * Metoda sluzy do rysowania kostki (szescianu).
+ *
+ * \param[in] tab przekazuje tablice wektorow wspolrzednych
+ * \param[in] cubeNorm przekazuje tablice norm do szescianu
+ * \param[in] color przekazuje wektor kolorow
+ * \param[in] index przekazuje tablice indeksow
+ *
+ */
 void Drawer::drawCube(glm::vec3 tab[], glm::vec3 cubeNorm[], glm::vec3 color, int index[])
 {
 	glm::vec3 points[3];
@@ -206,6 +315,16 @@ void Drawer::drawCube(glm::vec3 tab[], glm::vec3 cubeNorm[], glm::vec3 color, in
 	}
 }
 
+/** \brief Metoda drawCubeLines
+ *
+ * Metoda sluzy do rysowania linii kostki (szescianu).
+ *
+ * \param[in] tab przekazuje tablice wektorow wspolrzednych
+ * \param[in] cubeNorm przekazuje tablice norm do szescianu
+ * \param[in] color przekazuje wektor kolorow
+ * \param[in] index przekazuje tablice indeksow
+ *
+ */
 void Drawer::drawCubeLines(glm::vec3 tab[], glm::vec3 cubeNorm[], glm::vec3 color, int index[])
 {
 	glm::vec3 points[3];
@@ -221,6 +340,16 @@ void Drawer::drawCubeLines(glm::vec3 tab[], glm::vec3 cubeNorm[], glm::vec3 colo
 	}
 }
 
+/** \brief Metoda drawCubeLines
+ *
+ * Metoda sluzy do rysowania linii kostki (szescianu).
+ *
+ * \param[in] tab przekazuje tablice wektorow wspolrzednych
+ * \param[in] cubeNorm przekazuje tablice norm do szescianu
+ * \param[in] color przekazuje tablice wektorow kolorow
+ * \param[in] index przekazuje tablice indeksow
+ *
+ */
 void Drawer::drawCubeWithLines(glm::vec3 tab[], glm::vec3 cubeNorm[], glm::vec3 color[], int index[])
 {
 	glm::vec3 points[3];

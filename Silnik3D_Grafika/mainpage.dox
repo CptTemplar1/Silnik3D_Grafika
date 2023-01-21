@@ -1,0 +1,14 @@
+/** \mainpage Strona glowna dokumentacji Silnika3D z przedmiotu Podstawy Grafiki Komputerowej
+ * Temat projektu: "Silnik3D"<br><br>
+ *
+ * Krotki opis projektu: <br>
+ * Celem projektu było utworzenie Silnika3D będącego zademonstrowaniem możliwości grafiki wielowymiarowej. Raczej nie można powiedzieć, że jest to narzędzie przydatyne w tworzeniu gier komputerowych, ponieważ na rynku istnieją lepsze produkcje. <br>
+ * Do jego produkcji wykorzystaliśmy język C++ oraz biblioteki takie jak OpenGL oraz GLM.<br>
+ * Posiada on między innymi takie funkcjonalności jak rysowanie różnych figur geometrycznych oraz poruszanie się między 4 trójwymiarowymi kostkami.<br>
+ * Autorzy projektu:<br>
+ * -Przemyslaw Kaluzinski (91271) <br>
+ * -Grzegorz Kalarus (91269) <br>
+ * -Michal Kaczor (91268) <br><br>
+ *
+ * Grupa: 3ID13A
+ */

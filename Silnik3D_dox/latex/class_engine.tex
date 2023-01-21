@@ -1,0 +1,406 @@
+\hypertarget{class_engine}{}\doxysection{Engine Class Reference}
+\label{class_engine}\index{Engine@{Engine}}
+
+
+Klasa \mbox{\hyperlink{class_engine}{Engine}}.  
+
+
+
+
+{\ttfamily \#include $<$Engine.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_engine_a27ea6e194d8f7b1345b86cd05e976db9}{Engine}} (int \mbox{\hyperlink{class_engine_a5e537cd5ccaca8ee363ec28e858b1487}{width}}, int \mbox{\hyperlink{class_engine_af96739cc628f8f1ad1de8f11e6d77bad}{height}})
+\begin{DoxyCompactList}\small\item\em Konstruktor \mbox{\hyperlink{class_engine}{Engine}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_engine_ad98a94f57093a956bce25bba0d61c0f4}{set\+Back\+Ground\+Color}} (glm\+::vec4 color)
+\begin{DoxyCompactList}\small\item\em Metoda set\+Back\+Ground\+Color. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{class_engine_aed0b02ad4a43a8fc71b4084a2b45b612}{toggle\+Full\+Screen}} ()
+\begin{DoxyCompactList}\small\item\em Metoda toggle\+Full\+Screen. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{class_engine_a08f0e96ff816b941511cde51fa4a2591}{swap\+To\+Perspectiv}} ()
+\begin{DoxyCompactList}\small\item\em Metoda swap\+To\+Perspectiv. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{class_engine_abbeded00b7033ed303bc132e40ae5ca2}{swap\+To\+Ortogonal}} ()
+\begin{DoxyCompactList}\small\item\em Metoda swap\+To\+Ortogonal. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{class_engine_a95673b683098eaa9defdf74b2b057761}{swap\+Prespective\+Mode}} ()
+\begin{DoxyCompactList}\small\item\em Metoda swap\+Prespective\+Mode. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{class_engine_a8a4f3847baa6f338d673094fabcbf035}{Idle}} ()
+\begin{DoxyCompactList}\small\item\em Metoda Idle. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{class_engine_a560660767c527229cdde5bed0e2eb63c}{mouse}} (int x, int y)
+\begin{DoxyCompactList}\small\item\em Metoda mouse. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{class_engine_a91a8e8016904e18ae255cbde549c220d}{resize}} (int w, int h)
+\begin{DoxyCompactList}\small\item\em Metoda resize. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{class_engine_a63c9789a2b5db45682812c70d8bd5b3e}{On\+Key\+Board}} (unsigned char key, int x, int y)
+\begin{DoxyCompactList}\small\item\em Metoda On\+Key\+Board. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{class_engine_afacfdbcadcd2f65c3c977216f499ec23}{On\+Special\+Key}} (int key, int x, int y)
+\begin{DoxyCompactList}\small\item\em Metoda On\+Special\+Key. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{class_engine_a9810f02fa09d38cb0498a95045d4b87e}{On\+Close}} ()
+\begin{DoxyCompactList}\small\item\em Metoda On\+Close. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{class_engine_ad58865eedf3733680e16878a2a470bdd}{On\+Timer}} (int val)
+\begin{DoxyCompactList}\small\item\em Metoda On\+Timer. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{class_engine_ad2ff110d5a86c1cd60b541d65915ac48}{update}} ()
+\begin{DoxyCompactList}\small\item\em Metoda update. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{class_engine_ac098ab29cbcd7352879d0101aaf4b827}{Draw}} ()
+\begin{DoxyCompactList}\small\item\em Metoda Draw. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{class_engine_a4ef2cb5c27281a4fe56c0097e7a034c4}{draw}} (void)
+\begin{DoxyCompactList}\small\item\em Metoda draw. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{class_engine_a95d41c1b0d442c23a1df7f22f20251fd}{set\+FPS}} (int \mbox{\hyperlink{class_engine_a48598e65b64c233d53c96bd22032b845}{FPS}})
+\begin{DoxyCompactList}\small\item\em Metoda set\+FPS. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{class_engine_a25ad610aaf59ae357c28796f75cfa3e0}{main\+Loop}} ()
+\begin{DoxyCompactList}\small\item\em Metoda main\+Loop. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static int \mbox{\hyperlink{class_engine_a48598e65b64c233d53c96bd22032b845}{FPS}} = 60
+\item 
+static int \mbox{\hyperlink{class_engine_a5e537cd5ccaca8ee363ec28e858b1487}{width}} = 900
+\item 
+static int \mbox{\hyperlink{class_engine_af96739cc628f8f1ad1de8f11e6d77bad}{height}} = 1600
+\item 
+static glm\+::vec4 \mbox{\hyperlink{class_engine_a807febe37127e9020b4a328ffa061e1e}{background\+Color}} = \{ 0.\+0f,0.\+0f,0.\+0f,0.\+0f \}
+\item 
+static int \mbox{\hyperlink{class_engine_ae6f3cb08f76768087253bc5998bd7022}{counter}} = 0
+\item 
+static glm\+::vec3 \mbox{\hyperlink{class_engine_ac82da6e39aad7a94346ea1844f434110}{pos}} = \{ 0 ,0, -\/100 \}
+\item 
+static glm\+::vec3 \mbox{\hyperlink{class_engine_a472c5ce1d21af81f5f002f0495a4c49f}{degree}} = \{ 0 ,0, 0 \}
+\item 
+static float \mbox{\hyperlink{class_engine_a646af0195e84eade4e2fd6fa5b878378}{lastX}} = 0
+\item 
+static float \mbox{\hyperlink{class_engine_a72524e541cba9d7344cb0b32ab29b9cc}{lastY}} = 0
+\item 
+static \mbox{\hyperlink{class_camera}{Camera}} \mbox{\hyperlink{class_engine_a25924c4045f695c4fb6b6439777b1920}{camera}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Klasa \mbox{\hyperlink{class_engine}{Engine}}. 
+
+Klasa \mbox{\hyperlink{class_engine}{Engine}} jest to glowna klasa silnika. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_engine_a27ea6e194d8f7b1345b86cd05e976db9}\label{class_engine_a27ea6e194d8f7b1345b86cd05e976db9}} 
+\index{Engine@{Engine}!Engine@{Engine}}
+\index{Engine@{Engine}!Engine@{Engine}}
+\doxysubsubsection{\texorpdfstring{Engine()}{Engine()}}
+{\footnotesize\ttfamily Engine\+::\+Engine (\begin{DoxyParamCaption}\item[{int}]{w,  }\item[{int}]{h }\end{DoxyParamCaption})}
+
+
+
+Konstruktor \mbox{\hyperlink{class_engine}{Engine}}. 
+
+Konstruktor laczacy metody z biblioteka freeglut.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em w} & przekazuje szerokosc ekranu \\
+\hline
+\mbox{\texttt{ in}}  & {\em h} & przekazuje wysokosc ekranu \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_engine_ac098ab29cbcd7352879d0101aaf4b827}\label{class_engine_ac098ab29cbcd7352879d0101aaf4b827}} 
+\index{Engine@{Engine}!Draw@{Draw}}
+\index{Draw@{Draw}!Engine@{Engine}}
+\doxysubsubsection{\texorpdfstring{Draw()}{Draw()}}
+{\footnotesize\ttfamily void Engine\+::\+Draw (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Metoda Draw. 
+
+Metoda sluzaca rysujaca podane obiekty. \mbox{\Hypertarget{class_engine_a4ef2cb5c27281a4fe56c0097e7a034c4}\label{class_engine_a4ef2cb5c27281a4fe56c0097e7a034c4}} 
+\index{Engine@{Engine}!draw@{draw}}
+\index{draw@{draw}!Engine@{Engine}}
+\doxysubsubsection{\texorpdfstring{draw()}{draw()}}
+{\footnotesize\ttfamily void Engine\+::draw (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Metoda draw. 
+
+Metoda rysujaca przekazywana do freeglut. \mbox{\Hypertarget{class_engine_a8a4f3847baa6f338d673094fabcbf035}\label{class_engine_a8a4f3847baa6f338d673094fabcbf035}} 
+\index{Engine@{Engine}!Idle@{Idle}}
+\index{Idle@{Idle}!Engine@{Engine}}
+\doxysubsubsection{\texorpdfstring{Idle()}{Idle()}}
+{\footnotesize\ttfamily void Engine\+::\+Idle (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Metoda Idle. 
+
+Metoda wywolywana w tle. \mbox{\Hypertarget{class_engine_a25ad610aaf59ae357c28796f75cfa3e0}\label{class_engine_a25ad610aaf59ae357c28796f75cfa3e0}} 
+\index{Engine@{Engine}!mainLoop@{mainLoop}}
+\index{mainLoop@{mainLoop}!Engine@{Engine}}
+\doxysubsubsection{\texorpdfstring{mainLoop()}{mainLoop()}}
+{\footnotesize\ttfamily void Engine\+::main\+Loop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Metoda main\+Loop. 
+
+Metoda sluzaca do odpalania glownej petli. \mbox{\Hypertarget{class_engine_a560660767c527229cdde5bed0e2eb63c}\label{class_engine_a560660767c527229cdde5bed0e2eb63c}} 
+\index{Engine@{Engine}!mouse@{mouse}}
+\index{mouse@{mouse}!Engine@{Engine}}
+\doxysubsubsection{\texorpdfstring{mouse()}{mouse()}}
+{\footnotesize\ttfamily void Engine\+::mouse (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Metoda mouse. 
+
+Metoda w zaleznosci od perspektywy zarzadza myszka.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em x} & przekazuje wspolrzedna myszki \\
+\hline
+\mbox{\texttt{ in}}  & {\em y} & przekazuje wspolrzedna myszki \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_engine_a9810f02fa09d38cb0498a95045d4b87e}\label{class_engine_a9810f02fa09d38cb0498a95045d4b87e}} 
+\index{Engine@{Engine}!OnClose@{OnClose}}
+\index{OnClose@{OnClose}!Engine@{Engine}}
+\doxysubsubsection{\texorpdfstring{OnClose()}{OnClose()}}
+{\footnotesize\ttfamily void Engine\+::\+On\+Close (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Metoda On\+Close. 
+
+Metoda wywolywana przy zamknieciu. \mbox{\Hypertarget{class_engine_a63c9789a2b5db45682812c70d8bd5b3e}\label{class_engine_a63c9789a2b5db45682812c70d8bd5b3e}} 
+\index{Engine@{Engine}!OnKeyBoard@{OnKeyBoard}}
+\index{OnKeyBoard@{OnKeyBoard}!Engine@{Engine}}
+\doxysubsubsection{\texorpdfstring{OnKeyBoard()}{OnKeyBoard()}}
+{\footnotesize\ttfamily void Engine\+::\+On\+Key\+Board (\begin{DoxyParamCaption}\item[{unsigned char}]{key,  }\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Metoda On\+Key\+Board. 
+
+Metoda w zaleznosci od wcisnietego przycisku zwieksza iteracje lub liczbe wyswietlanych figur.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em key} & przekazuje przycisk \\
+\hline
+\mbox{\texttt{ in}}  & {\em x} & przekazuje wspolrzedna x \\
+\hline
+\mbox{\texttt{ in}}  & {\em y} & przekazuje wspolrzedna y \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_engine_afacfdbcadcd2f65c3c977216f499ec23}\label{class_engine_afacfdbcadcd2f65c3c977216f499ec23}} 
+\index{Engine@{Engine}!OnSpecialKey@{OnSpecialKey}}
+\index{OnSpecialKey@{OnSpecialKey}!Engine@{Engine}}
+\doxysubsubsection{\texorpdfstring{OnSpecialKey()}{OnSpecialKey()}}
+{\footnotesize\ttfamily void Engine\+::\+On\+Special\+Key (\begin{DoxyParamCaption}\item[{int}]{key,  }\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Metoda On\+Special\+Key. 
+
+Metoda w zaleznosci od wcisnietego specjalnego przycisku zmienia perspektywe.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em key} & przekazuje przycisk \\
+\hline
+\mbox{\texttt{ in}}  & {\em x} & przekazuje wspolrzedna x \\
+\hline
+\mbox{\texttt{ in}}  & {\em y} & przekazuje wspolrzedna y \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_engine_ad58865eedf3733680e16878a2a470bdd}\label{class_engine_ad58865eedf3733680e16878a2a470bdd}} 
+\index{Engine@{Engine}!OnTimer@{OnTimer}}
+\index{OnTimer@{OnTimer}!Engine@{Engine}}
+\doxysubsubsection{\texorpdfstring{OnTimer()}{OnTimer()}}
+{\footnotesize\ttfamily void Engine\+::\+On\+Timer (\begin{DoxyParamCaption}\item[{int}]{val }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Metoda On\+Timer. 
+
+Metoda sluzaca do szybkosci wyswietlania obrazu.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em val} & przekazuje wartosci \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_engine_a91a8e8016904e18ae255cbde549c220d}\label{class_engine_a91a8e8016904e18ae255cbde549c220d}} 
+\index{Engine@{Engine}!resize@{resize}}
+\index{resize@{resize}!Engine@{Engine}}
+\doxysubsubsection{\texorpdfstring{resize()}{resize()}}
+{\footnotesize\ttfamily void Engine\+::resize (\begin{DoxyParamCaption}\item[{int}]{w,  }\item[{int}]{h }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Metoda resize. 
+
+Metoda zmienia wielkosc okna.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em w} & przekazuje szerokosc okna \\
+\hline
+\mbox{\texttt{ in}}  & {\em h} & przekazuje wysokosc okna \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_engine_ad98a94f57093a956bce25bba0d61c0f4}\label{class_engine_ad98a94f57093a956bce25bba0d61c0f4}} 
+\index{Engine@{Engine}!setBackGroundColor@{setBackGroundColor}}
+\index{setBackGroundColor@{setBackGroundColor}!Engine@{Engine}}
+\doxysubsubsection{\texorpdfstring{setBackGroundColor()}{setBackGroundColor()}}
+{\footnotesize\ttfamily void Engine\+::set\+Back\+Ground\+Color (\begin{DoxyParamCaption}\item[{glm\+::vec4}]{color }\end{DoxyParamCaption})}
+
+
+
+Metoda set\+Back\+Ground\+Color. 
+
+Metoda ustawia przekazany kolor tla.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em color} & przekazuje wektor z kolorami do ustwaienia \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_engine_a95d41c1b0d442c23a1df7f22f20251fd}\label{class_engine_a95d41c1b0d442c23a1df7f22f20251fd}} 
+\index{Engine@{Engine}!setFPS@{setFPS}}
+\index{setFPS@{setFPS}!Engine@{Engine}}
+\doxysubsubsection{\texorpdfstring{setFPS()}{setFPS()}}
+{\footnotesize\ttfamily void Engine\+::set\+FPS (\begin{DoxyParamCaption}\item[{int}]{FPS }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Metoda set\+FPS. 
+
+Metoda ustawia liczbe fps\textquotesingle{}ow.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em FPS} & przekazuje liczbe fps\textquotesingle{}ow \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_engine_a95673b683098eaa9defdf74b2b057761}\label{class_engine_a95673b683098eaa9defdf74b2b057761}} 
+\index{Engine@{Engine}!swapPrespectiveMode@{swapPrespectiveMode}}
+\index{swapPrespectiveMode@{swapPrespectiveMode}!Engine@{Engine}}
+\doxysubsubsection{\texorpdfstring{swapPrespectiveMode()}{swapPrespectiveMode()}}
+{\footnotesize\ttfamily void Engine\+::swap\+Prespective\+Mode (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Metoda swap\+Prespective\+Mode. 
+
+Metoda sluzaca do zmiany widzenia na perspektywiczne lub ortogonalne. \mbox{\Hypertarget{class_engine_abbeded00b7033ed303bc132e40ae5ca2}\label{class_engine_abbeded00b7033ed303bc132e40ae5ca2}} 
+\index{Engine@{Engine}!swapToOrtogonal@{swapToOrtogonal}}
+\index{swapToOrtogonal@{swapToOrtogonal}!Engine@{Engine}}
+\doxysubsubsection{\texorpdfstring{swapToOrtogonal()}{swapToOrtogonal()}}
+{\footnotesize\ttfamily void Engine\+::swap\+To\+Ortogonal (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Metoda swap\+To\+Ortogonal. 
+
+Metoda sluzaca do zmiany widzenia na ortogonalne. \mbox{\Hypertarget{class_engine_a08f0e96ff816b941511cde51fa4a2591}\label{class_engine_a08f0e96ff816b941511cde51fa4a2591}} 
+\index{Engine@{Engine}!swapToPerspectiv@{swapToPerspectiv}}
+\index{swapToPerspectiv@{swapToPerspectiv}!Engine@{Engine}}
+\doxysubsubsection{\texorpdfstring{swapToPerspectiv()}{swapToPerspectiv()}}
+{\footnotesize\ttfamily void Engine\+::swap\+To\+Perspectiv (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Metoda swap\+To\+Perspectiv. 
+
+Metoda sluzaca do zmiany widzenia na perspektywiczne. \mbox{\Hypertarget{class_engine_aed0b02ad4a43a8fc71b4084a2b45b612}\label{class_engine_aed0b02ad4a43a8fc71b4084a2b45b612}} 
+\index{Engine@{Engine}!toggleFullScreen@{toggleFullScreen}}
+\index{toggleFullScreen@{toggleFullScreen}!Engine@{Engine}}
+\doxysubsubsection{\texorpdfstring{toggleFullScreen()}{toggleFullScreen()}}
+{\footnotesize\ttfamily void Engine\+::toggle\+Full\+Screen (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Metoda toggle\+Full\+Screen. 
+
+Metoda ustawia pelny ekran. \mbox{\Hypertarget{class_engine_ad2ff110d5a86c1cd60b541d65915ac48}\label{class_engine_ad2ff110d5a86c1cd60b541d65915ac48}} 
+\index{Engine@{Engine}!update@{update}}
+\index{update@{update}!Engine@{Engine}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void Engine\+::update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Metoda update. 
+
+Metoda aktualizujaca. 
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_engine_a807febe37127e9020b4a328ffa061e1e}\label{class_engine_a807febe37127e9020b4a328ffa061e1e}} 
+\index{Engine@{Engine}!backgroundColor@{backgroundColor}}
+\index{backgroundColor@{backgroundColor}!Engine@{Engine}}
+\doxysubsubsection{\texorpdfstring{backgroundColor}{backgroundColor}}
+{\footnotesize\ttfamily glm\+::vec4 Engine\+::background\+Color = \{ 0.\+0f,0.\+0f,0.\+0f,0.\+0f \}\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+Statyczny wektor przechowujacy kolor tla \mbox{\Hypertarget{class_engine_a25924c4045f695c4fb6b6439777b1920}\label{class_engine_a25924c4045f695c4fb6b6439777b1920}} 
+\index{Engine@{Engine}!camera@{camera}}
+\index{camera@{camera}!Engine@{Engine}}
+\doxysubsubsection{\texorpdfstring{camera}{camera}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_camera}{Camera}} Engine\+::camera\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+Statyczny obiekt kamery \mbox{\Hypertarget{class_engine_ae6f3cb08f76768087253bc5998bd7022}\label{class_engine_ae6f3cb08f76768087253bc5998bd7022}} 
+\index{Engine@{Engine}!counter@{counter}}
+\index{counter@{counter}!Engine@{Engine}}
+\doxysubsubsection{\texorpdfstring{counter}{counter}}
+{\footnotesize\ttfamily int Engine\+::counter = 0\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+Zmienna statyczna calkowita przechowujaca liczbe iteracji \mbox{\Hypertarget{class_engine_a472c5ce1d21af81f5f002f0495a4c49f}\label{class_engine_a472c5ce1d21af81f5f002f0495a4c49f}} 
+\index{Engine@{Engine}!degree@{degree}}
+\index{degree@{degree}!Engine@{Engine}}
+\doxysubsubsection{\texorpdfstring{degree}{degree}}
+{\footnotesize\ttfamily glm\+::vec3 Engine\+::degree = \{ 0 ,0, 0 \}\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+Statyczny wektor przechowujacy kat widzenia \mbox{\Hypertarget{class_engine_a48598e65b64c233d53c96bd22032b845}\label{class_engine_a48598e65b64c233d53c96bd22032b845}} 
+\index{Engine@{Engine}!FPS@{FPS}}
+\index{FPS@{FPS}!Engine@{Engine}}
+\doxysubsubsection{\texorpdfstring{FPS}{FPS}}
+{\footnotesize\ttfamily int Engine\+::\+FPS = 60\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+Zmienna statyczna calkowita przechowujaca liczbe fps\textquotesingle{}ow \mbox{\Hypertarget{class_engine_af96739cc628f8f1ad1de8f11e6d77bad}\label{class_engine_af96739cc628f8f1ad1de8f11e6d77bad}} 
+\index{Engine@{Engine}!height@{height}}
+\index{height@{height}!Engine@{Engine}}
+\doxysubsubsection{\texorpdfstring{height}{height}}
+{\footnotesize\ttfamily int Engine\+::height = 1600\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+Zmienna statyczna calkowita przechowujaca wysokosc ekranu \mbox{\Hypertarget{class_engine_a646af0195e84eade4e2fd6fa5b878378}\label{class_engine_a646af0195e84eade4e2fd6fa5b878378}} 
+\index{Engine@{Engine}!lastX@{lastX}}
+\index{lastX@{lastX}!Engine@{Engine}}
+\doxysubsubsection{\texorpdfstring{lastX}{lastX}}
+{\footnotesize\ttfamily float Engine\+::lastX = 0\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+Zmienna statyczna zmiennoprzecinkowa przechowujaca ostatnia pozycje x \mbox{\Hypertarget{class_engine_a72524e541cba9d7344cb0b32ab29b9cc}\label{class_engine_a72524e541cba9d7344cb0b32ab29b9cc}} 
+\index{Engine@{Engine}!lastY@{lastY}}
+\index{lastY@{lastY}!Engine@{Engine}}
+\doxysubsubsection{\texorpdfstring{lastY}{lastY}}
+{\footnotesize\ttfamily float Engine\+::lastY = 0\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+Zmienna statyczna zmiennoprzecinkowa przechowujaca ostatnia pozycje x \mbox{\Hypertarget{class_engine_ac82da6e39aad7a94346ea1844f434110}\label{class_engine_ac82da6e39aad7a94346ea1844f434110}} 
+\index{Engine@{Engine}!pos@{pos}}
+\index{pos@{pos}!Engine@{Engine}}
+\doxysubsubsection{\texorpdfstring{pos}{pos}}
+{\footnotesize\ttfamily glm\+::vec3 Engine\+::pos = \{ 0 ,0, -\/100 \}\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+Statyczny wektor przechowujacy pozycje \mbox{\Hypertarget{class_engine_a5e537cd5ccaca8ee363ec28e858b1487}\label{class_engine_a5e537cd5ccaca8ee363ec28e858b1487}} 
+\index{Engine@{Engine}!width@{width}}
+\index{width@{width}!Engine@{Engine}}
+\doxysubsubsection{\texorpdfstring{width}{width}}
+{\footnotesize\ttfamily int Engine\+::width = 900\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+Zmienna statyczna calkowita przechowujaca szerokosc ekranu 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+Git\+Hub/\+Silnik3\+D\+\_\+\+Grafika/\+Silnik3\+D\+\_\+\+Grafika/Engine.\+h\item 
+D\+:/\+Git\+Hub/\+Silnik3\+D\+\_\+\+Grafika/\+Silnik3\+D\+\_\+\+Grafika/Engine.\+cpp\end{DoxyCompactItemize}

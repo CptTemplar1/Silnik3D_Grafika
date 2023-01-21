@@ -5,29 +5,36 @@
 #include "../glm/gtc/type_ptr.hpp"
 #include "../glm/gtx/transform.hpp"
 #include "Camera.h"
-#include "a.h"
+
+/** \brief Klasa Engine
+ *
+ * Klasa Engine jest to glowna klasa silnika.
+ *
+ */
 class Engine
 {
-	static int FPS;
-	static int w, h;
-	static glm::vec4 colorBackGround;
-	static int a;
-	static int b;
-	static glm::vec3 Pos;
-	static glm::vec3 degris;
-	static float lastX, lastY;
-	static Camera camera;
+	static int FPS;/**< Zmienna statyczna calkowita przechowujaca liczbe fps'ow */
+	static int width;/**< Zmienna statyczna calkowita przechowujaca szerokosc ekranu */
+	static int height;/**< Zmienna statyczna calkowita przechowujaca wysokosc ekranu */
+	static glm::vec4 backgroundColor;/**< Statyczny wektor przechowujacy kolor tla */
+	static int counter;/**< Zmienna statyczna calkowita przechowujaca liczbe iteracji */
+	static glm::vec3 pos;/**< Statyczny wektor przechowujacy pozycje */
+	static glm::vec3 degree;/**< Statyczny wektor przechowujacy kat widzenia */
+	static float lastX;/**< Zmienna statyczna zmiennoprzecinkowa przechowujaca ostatnia pozycje x */
+	static float lastY;/**< Zmienna statyczna zmiennoprzecinkowa przechowujaca ostatnia pozycje x */
+	static Camera camera;/**< Statyczny obiekt kamery */
 public:
-	Engine(int w, int h);
-	void setBackGroundColor(glm::vec4 color)
-	{
-		glClearColor(color.r, color.g, color.b, color.a);
-	}
-	static void toggleFullScreen();
-	static void swapToPerspectiv();
-	static void swapToOrtogonal();
-	static void swapPrespectiveMode();
+	Engine(int width, int height);
 
+	void setBackGroundColor(glm::vec4 color);
+
+	static void toggleFullScreen();
+
+	static void swapToPerspectiv();
+
+	static void swapToOrtogonal();
+
+	static void swapPrespectiveMode();
 
 	static void Idle();
 
@@ -39,28 +46,19 @@ public:
 
 	static void OnSpecialKey(int key, int x, int y);
 
-	static void OnClose() {
-
-	}
+	static void OnClose();
 
 	static void OnTimer(int val);
 
-	static void update() {
-
-	}
+	static void update();
 
 	static void Draw();
 
 	static void draw(void);
 
-	static void setFPS(int FPS) {
-		Engine::FPS = FPS;
-		glutTimerFunc(1000 / FPS, OnTimer, 0);
-	}
-	static void mainLoop()
-	{
-		glutMainLoop();
-	}
+	static void setFPS(int FPS);
+
+	static void mainLoop();
 };
 
 

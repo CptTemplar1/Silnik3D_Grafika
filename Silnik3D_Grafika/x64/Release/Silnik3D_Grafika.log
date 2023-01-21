@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ﻿  Engine.cpp
 D:\GitHub\Silnik3D_Grafika\Silnik3D_Grafika\Camera.h(22,46): warning C4244: "=": konwersja z "int" do "float", możliwa utrata danych
 D:\GitHub\Silnik3D_Grafika\Silnik3D_Grafika\Camera.h(23,56): warning C4244: "=": konwersja z "int" do "float", możliwa utrata danych
@@ -8,3 +9,13 @@ D:\GitHub\Silnik3D_Grafika\Silnik3D_Grafika\Camera.h(24,52): warning C4244: "=":
     0 functions had inline decision re-evaluated but remain unchanged
   Zakończono generowanie kodu
   Silnik3D_Grafika.vcxproj -> D:\GitHub\Silnik3D_Grafika\x64\Release\Silnik3D_Grafika.exe
+=======
+﻿  Cube.cpp
+C:\Users\przem\OneDrive\Pulpit\Silnik3D_Grafika\Silnik3D_Grafika\Cube.cpp(119,10): warning C4305: "+=": obcięcie z "double" do "float"
+  Trwa generowanie kodu
+  6 of 107 functions ( 5.6%) were compiled, the rest were copied from previous compilation.
+    0 functions were new in current compilation
+    4 functions had inline decision re-evaluated but remain unchanged
+  Zakończono generowanie kodu
+  Silnik3D_Grafika.vcxproj -> C:\Users\przem\OneDrive\Pulpit\Silnik3D_Grafika\x64\Release\Silnik3D_Grafika.exe
+>>>>>>> 406db5a755c2c0c00379b16673ed7d3ea08cadbd

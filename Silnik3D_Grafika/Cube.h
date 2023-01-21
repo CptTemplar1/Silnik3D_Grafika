@@ -1,14 +1,21 @@
 #pragma once
 #include "Drawer.h"
+#include "Object.h"
 
-class Cube
+/** \brief Klasa Cube
+ *
+ * Klasa Cube jest klasa szescianu.
+ *
+ */
+class Cube :
+	public Object
 {
-	glm::vec3 points[8];
-	glm::mat4 matrix;
-	glm::vec3 norms[36];
-	glm::vec3 colors[8];
-	static int index[];
-	float r = 0;
+	glm::mat4 matrix;/**< Matrix przechowujacy matrix szescianu */
+	glm::vec3 points[8];/**< Tablica wektorow punktow szescianu */
+	glm::vec3 norms[36];/**< Tablica wektorow norm szescianu */
+	glm::vec3 colors[8];/**< Tablica wektorow kolorow szescianu */
+	static int index[];/**< Statyczna tablica liczb calkowitych przechowujaca indexy */
+	float r;/**< Zmienna zmiennoprzecnikowa uzywana w rotacji */
 public:
 	Cube(float x, float y, float z);
 
@@ -18,38 +25,6 @@ public:
 
 	void scale(glm::vec3 p);
 
-	void draw(glm::mat4 view)
-	{
-		matrix = glm::mat4(1);
-		//r += 0.1;
-		//matrix = glm::rotate(glm::radians<float>(r), glm::vec3(1.0f, 0, 0));
-		matrix = glm::translate(matrix, glm::vec3(0, 0, 500));
-		glMatrixMode(GL_MODELVIEW);
-
-		glLoadMatrixf(glm::value_ptr(view * matrix));
-		//glutSolidCube(300);
-
-		Drawer::drawCube(points, norms, colors, index);
-		matrix = glm::translate(glm::vec3(0, 0, -500));
-		glMatrixMode(GL_MODELVIEW);
-		glLoadMatrixf(glm::value_ptr(view * matrix));
-		Drawer::drawCube(points, norms, { 1.0f,1.0f,0 }, index);
-
-		matrix = glm::translate(glm::vec3(0, -500, 0));
-
-		glMatrixMode(GL_MODELVIEW);
-		glLoadMatrixf(glm::value_ptr(view * matrix));
-		Drawer::drawCube(points, norms, { 1.0f,0.0f,0 }, index);
-
-		matrix = glm::translate(glm::vec3(0, 500, 0));
-
-		glMatrixMode(GL_MODELVIEW);
-		glLoadMatrixf(glm::value_ptr(view * matrix));
-		Drawer::drawCube(points, norms, { 0.0f,0.0f,1.0f }, index);
-
-	}
-
-
-
+	void draw(glm::mat4 view);
 };
 
